@@ -1,0 +1,980 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.smiggle.co.uk/wcsstore/SmiggleAuroraStorefrontAssetStore/css/main.css" type="text/css">
+<link rel="stylesheet" href="https://www.smiggle.co.uk/SM/aurora/css/global.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" type="text/css">
+<script type="text/javascript" src="https://www.smiggle.co.uk/wcsstore/JQuery/vendor.js"></script>
+<script type="text/javascript" src="https://www.smiggle.co.uk/SM/aurora/js/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.smiggle.co.uk/SM/aurora/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="https://www.smiggle.co.uk/SM/aurora/css/slick-theme.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    hr {
+        display: block;
+        margin-top: 2em;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-width: .5px;
+        border-color: #f4f4f4;
+        width: 100%;
+    }
+
+    .heropreheader {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .heropreheader p {
+        color: #2C3F57;
+        font-family: 'Rubik', sans-serif;
+        font-size: 100%;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .frozen p,
+    .starwars p {
+        font-size: 1.2rem;
+    }
+
+    .sm-btn-ab {
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .section_heading {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+
+    .twobuttons {
+        max-width: 420px;
+        bottom: 1%;
+        left: calc(50% - 7%);
+        position: absolute;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .disneylogo {
+        max-width: 300px;
+        padding-top: 30px
+    }
+
+    .previewtext {
+        max-width: 580px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .catbtn {
+        max-width: 300px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .catbtn img {
+        padding: 20px 0 0 10px;
+    }
+
+
+
+    .frozen {
+        background: linear-gradient(180deg, #ffffff 50%, #f4f4f4 50%)
+    }
+
+    .frozench {
+        background-image: url(images/bg_frozen_characters.png);
+        background-repeat: no-repeat;
+        background-position-y: 40%;
+        background-size: contain;
+    }
+
+    .starwars {
+        background: linear-gradient(180deg, #ffffff 50%, #f4f4f4 50%)
+    }
+
+    .leaves {
+        max-width: 120px;
+        position: relative;
+        z-index: 2;
+        left: -340px;
+        top: 890px;
+        float: right;
+    }
+
+    .xwing {
+        max-width: 240px;
+        position: relative;
+        z-index: 2;
+        top: 890px;
+        left: 40px;
+        float: left;
+        transform: rotate(20deg);
+    }
+
+    .frozenwrap {
+        padding-left: 120px;
+    }
+
+    .frozen_video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        vertical-align: top;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    .frozenjourney_title {
+        max-width: 549px;
+        margin: 0px auto;
+    }
+
+    .swwrap {
+        padding-right: 240px;
+    }
+
+    .heropreheader {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .frozenflatlay {
+        background-image: url(images/img_frozen_flatlay@2x.png);
+        background-repeat: no-repeat;
+        background-size: 600px;
+        background-position: -140px 50%;
+    }
+
+    .swflatlay {
+        background-image: url(images/img_sw_flatlay@2x.png);
+        background-repeat: no-repeat;
+        background-size: 600px;
+        background-position: 110% 50%;
+    }
+
+    @media screen and (max-width: 2100px) {
+        .frozenflatlay {
+            background-size: 600px;
+        }
+
+        .swflatlay {
+            background-size: 600px;
+        }
+    }
+
+    @media screen and (max-width: 1900px) {
+        .frozenflatlay {
+            background-size: 600px;
+            background-position: -250px 50%;
+        }
+
+        .swflatlay {
+            background-size: 500px;
+            background-position: 110% 50%;
+        }
+
+        .leaves {
+            left: -15%;
+        }
+    }
+
+    @media screen and (max-width: 1700px) {
+        .frozenflatlay {
+            background-size: 600px;
+            background-position: -300px 50%;
+        }
+
+        .swflatlay {
+            background-size: 450px;
+            background-position: 110% 50%;
+        }
+
+        .leaves {
+            left: -13%;
+        }
+
+        .xwing {
+            max-width: 210px;
+        }
+    }
+
+    @media screen and (max-width: 1580px) {
+        .frozenflatlay {
+            background-image: none;
+        }
+
+        .swflatlay {
+            background-image: none;
+        }
+
+        .leaves {
+            display: none;
+        }
+
+        .xwing {
+            display: none;
+        }
+
+        .frozenwrap {
+            padding-left: 0;
+        }
+
+        .swwrap {
+            padding-right: 0;
+        }
+    }
+
+    /* Carousel */
+    .slick-thumbs {
+        display: block;
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .slick-big-wrap img {
+        width: 960px;
+    }
+
+    .slick-big-wrap {
+        margin-left: -40px;
+    }
+
+    .slick-disney .slick-slide {
+        text-align: center;
+        border: none;
+    }
+
+    .slick-disney img {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .slick-disney .slick-list,
+    .slick-disney .slick-track {
+        overflow: visible;
+    }
+
+    .slick-disney .slick-current {
+        width: 0 30px;
+        top: 50%;
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3);
+        -webkit-transform-origin: center center;
+        -moz-transform-origin: center center;
+        -ms-transform-origin: center center;
+        -o-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-transition: transform .3s ease;
+        -o-transition: transform .3s ease;
+        transition: transform .3s ease;
+    }
+
+    .disney_carousel_wrap {
+        max-width: 80%;
+        overflow: hidden;
+        margin: 0px 10%;
+        padding: 20px;
+    }
+
+    .disney-hero-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        animation: frozenhero 7s linear 0s infinite;
+        z-index: 9;
+    }
+
+    @keyframes frozenhero {
+        0% {
+            opacity: 0;
+        }
+
+        5% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        55% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .slick-prev:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f053";
+    }
+
+    .slick-next:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f054";
+    }
+
+    .slick-prev {
+        left: 20px;
+        z-index: 1;
+    }
+
+    /*SW Tab*/
+    @media screen and (min-device-width: 569px) and (max-device-width: 769px) {
+        .slick-slide {
+            text-align: center;
+            margin: 0px 10px;
+            0px 10px;
+            border: none;
+        }
+
+        .comingoctoberbg {
+            background-image: url(ComingLateOctober_BG.png);
+            background-repeat: repeat-x;
+            background-size: contain;
+            margin-top: -150px;
+        }
+
+        .frozen_carousel_wrap {
+            max-width: 960px;
+            overflow: hidden;
+            margin: 0px auto;
+            padding: 20px;
+        }
+
+        .slick-big-wrap {
+            margin-left: -50px;
+            overflow: hidden;
+        }
+
+        .frozenintro {
+            margin-top: 20px;
+        }
+    }
+
+    .carouselbg {
+        margin-top: 0;
+        padding-top: 10px;
+        background: linear-gradient(180deg, #f4f4f4 75%, #ffffff 45%)
+    }
+
+
+    /* Carousel Mob*/
+    @media screen and (max-width: 568px) {
+        .slick-slide {
+            text-align: center;
+            margin: 0px 10px;
+            0px 10px;
+            border: none;
+        }
+
+        .disney_carousel_wrap {
+            max-width: 960px;
+            overflow: hidden;
+            margin: 0px auto;
+            padding: 20px;
+            padding-right: 60px;
+        }
+
+        .slick-big-wrap {
+            margin-left: 0px;
+        }
+    }
+
+    /* Carousel Mob Sm*/
+    @media screen and (max-width: 320px) {
+        .frozen_carousel_wrap {
+            max-width: 960px;
+            overflow: hidden;
+            margin: 0px auto;
+            margin-left: -20px;
+        }
+    }
+
+    /* End Carousel */
+
+    /* Mobile */
+    @media screen and (max-width: 568px) {
+        .heropreheader p {
+            font-size: 95%;
+        }
+
+        .frozenwrap {
+            padding-left: 0;
+        }
+
+        .sm-btn-ab {
+            bottom: 1%;
+            left: 50%;
+        }
+
+        .heropreheader {
+            padding: 5px;
+        }
+
+        .section_heading {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .small-cta-mob {
+            max-width: 85% !important;
+        }
+
+        .salespace {
+            margin-bottom: 0px;
+        }
+
+        .saletile {
+            max-width: 86%;
+        }
+
+        .twobuttons {
+            max-width: 480px;
+            bottom: 2%;
+            left: calc(50% - 50%);
+
+        }
+
+        .frozen,
+        .starwars {
+            background-image: none;
+            background-color: #ffffff;
+        }
+
+        .catbtn {
+            max-width: 100%;
+            position: inherit;
+            bottom: 0;
+            padding-left: 1%;
+        }
+
+        .catbtn img {
+            padding: 8px 3px 0 3px;
+            max-width: 49%;
+        }
+
+        .starwars .catbtn img {
+            padding: 8px 3px 0 3px;
+            max-width: 49%;
+        }
+
+        .comp {
+            margin-top: 20px;
+        }
+
+        .frozench {
+            background-image: none;
+        }
+
+        .starwars .disneylogo {
+            padding-top: 40px;
+        }
+
+    }
+
+    /* iphone 5 */
+    @media screen and (max-width: 568px) {
+
+        .frozen p,
+        .starwars p {
+            font-size: 0.8em;
+        }
+
+        .previewtext {
+            margin-top: 0;
+        }
+
+        .disneylogo {
+            max-width: 210px;
+            padding-top: 5px;
+        }
+    }
+
+
+    /* Tablet */
+    @media screen and (min-width: 569px) and (max-width: 768px) {
+        .flatlay {
+            background-image: none;
+        }
+
+        .starwars .catbtn img {
+            padding: 20px 10px 0 0;
+        }
+
+    }
+
+
+    /* Sitewide */
+    .left_espot {
+        position: unset !important;
+    }
+
+    .its-sticky {
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 10;
+    }
+
+    #sitewide .banner a {
+        font-family: 'Rubik', sans-serif;
+        font-size: 100%;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #staticcountdown {
+        display: inline-block;
+    }
+
+    @keyframes fader3 {
+        0% {
+            z-index: 0;
+            opacity: 0;
+        }
+
+        32% {
+            z-index: 0;
+            opacity: 0;
+        }
+
+        33% {
+            z-index: 2;
+            opacity: 1;
+        }
+
+        66% {
+            z-index: 2;
+            opacity: 1;
+        }
+
+        67% {
+            z-index: 0;
+            opacity: 0;
+        }
+    }
+
+
+    @media all and (max-width: 768px) {
+        .its-sticky {
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 53px;
+            z-index: 10 !important;
+        }
+
+        #sitewide .split {
+            width: 100% !important;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        #sitewide .split_2 {
+            animation: fader3 9s linear 0s infinite;
+        }
+
+        #sitewide .split_3 {
+            animation: fader3 9s linear -3s infinite;
+        }
+
+    }
+</style>
+
+
+<!-- FD-->
+<section class="hide">
+    <div class="sticky grid__row grid__wrap-full">
+        <div id="sitewide" class="roww">
+            <div class="b_50 banner split tallest" style="background-color:#2C3F57;color:#f4f4f4;margin-top:0;">
+                <a href="/shop/en/smiggleuk/express-offer">40% OFF TOP 15 FAN FAVES<br><span style="font-weight:normal;">ONLINE ONLY | ENDS TONIGHT!</span></a>
+            </div>
+            <div class="b_50 banner split" style="background-color:#f4f4f4;color:#2C3F57;margin-top:0;">
+                <a href="/shop/en/smiggleuk/new/new-goodies"><i class="fas fa-truck"></i> FREE DELIVERY<br><span style="font-weight:normal;">ORDERS £50+</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="heropreheader hide">
+    <div class="grid__row grid__wrap">
+        <div class="grid__col--12">
+            <a href="/shop/en/smiggleuk/new/new-goodies">
+                <p><i class="fas fa-truck"></i> FREE DELIVERY ORDERS &#163;50+</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Frozen 2 Section-->
+<section>
+    <div class="frozen">
+        <div class="frozench">
+            <div class="frozenflatlay">
+                <div><img src="images/img_leaves.svg" class="leaves hide-on-mob" /></div>
+                <div class="grid__row grid__wrap frozenwrap">
+
+                    <div class="grid__col--12">
+                        <a href="/shop/en/smiggleuk/frozen-2-feature "><img src="images/frozen_logo.svg" class="disneylogo center" alt="Frozen 2" /></a>
+                    </div>
+
+                    <div class="previewtext center p10">
+                        <p>Introducing our first ever Disney collaboration with this limited edition Frozen 2 Collection! The journey starts with Smiggle.</p>
+                        <a href="/shop/en/smiggleuk/frozen-2-feature ">
+                            <h3>LEARN MORE <i class="fas fa-chevron-right"></i></h3>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="grid__row grid__wrap ns">
+                    <div class="grid__col--8 grid__col-xxs-12">
+                        <a href="/shop/en/smiggleuk/all-disney/all-disneys-frozen-2">
+                            <picture>
+                                <source media="(max-width: 639px)" srcset="images/img_frozen_talent_01_mob@1x.png, images//img_frozen_talent_01_mob@2x.png 2x" alt="Frozen 2">
+                                <img src="images/img_frozen_talent_01@1x.png" srcset="images/img_frozen_talent_01@2x.png 2x" alt="Frozen 2" />
+                            </picture>
+                        </a>
+                    </div>
+
+                    <div class="grid__col--4 grid__col-xxs-12" style="position: relative;">
+                        <div class="catbtn">
+                            <a href="/shop/en/smiggleuk/all-disney/all-disneys-frozen-2/disneys-frozen-2-elsa">
+                                <picture>
+                                    <source media="(max-width: 639px)" srcset="images/btn_elsa@1x.png, images/btn_elsa@2x.png 2x" alt="Shop Anna">
+                                    <img src="images/btn_elsa@1x.png" srcset="images/btn_elsa@2x.png 2x" alt="Shop Elsa" />
+                                </picture>
+                            </a>
+                            <a href="/shop/en/smiggleuk/all-disney/all-disneys-frozen-2/disneys-frozen-2-anna">
+                                <picture>
+                                    <source media="(max-width: 639px)" srcset="images/btn_anna@1x.png, images/btn_anna@2x.png 2x" alt="Shop Anna">
+                                    <img src="images/btn_anna@1x.png" srcset="images/btn_anna@2x.png 2x" alt="Shop Anna" />
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frozen 2 | Carousel -->
+    <a href="/shop/en/smiggleuk/all-disney/all-disneys-frozen-2">
+        <div class="carouselbg hide-on-mob">
+            <div class="grid__row grid__wrap grid__space-3">
+                <div class="grid__col--12 disney_carousel_wrap">
+                    <div class="slick-big-wrap">
+                        <ul class="slick-disney">
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Elsa_Prod1.jpg">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Anna_Prod2.jpg">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Elsa_Prod2.jpg">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Anna_Prod5.jpg">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Elsa_Prod6.jpg">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Anna_Prod1.jpg">
+                            </div>
+
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Anna_Prod3.jpg">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Elsa_Prod3.jpg">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Elsa_Prod4.jpg">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
+
+<!-- Frozen | Comp-->
+<section>
+    <div class="grid__row grid__wrap comp">
+        <a href="/shop/en/smiggleuk/frozen-2-competition ">
+            <picture>
+                <source media="(max-width: 639px)" srcset="images/comp_frozen_mob@1x.png, images/comp_frozen_mob@2x.png 2x" alt="Enter to win!">
+                <img src="images/comp_frozen@1x.png" srcset="images/comp_frozen@2x.png 2x" alt="Enter to win!" />
+            </picture>
+        </a>
+    </div>
+</section>
+
+<!-- Frozen Video -->
+<section class="mt40">
+    <div class="grid__row grid__wrap-wide ns">
+        <div class="grid__col--12">
+            <div class="frozenjourney_title">
+                <picture>
+                    <source media="(max-width: 639px)" srcset="/SM/aurora/images/espot/feature/frozen/live/BeAPartOfTheJourney@1x.png, /SM/aurora/images/espot/feature/frozen/live/BeAPartOfTheJourney@1x.png 2x">
+                    <img src="images/BeAPartOfTheJourney@1x.png" />
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid__row grid__wrap-wide" style="justify-content:center;">
+        <div class="grid__col--12 grid__col-m-12 grid__col-xxs-12">
+            <video loop autoplay playsinline muted style="height: auto; width: 100%; padding:10px;">
+                <source src="https://player.vimeo.com/external/368161069.hd.mp4?s=45e49cfb52bb5b6945ecbc199fef4ed32759ea0d&profile_id=175" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+<div class="grid__row grid__wrap">
+    <hr>
+</div>
+<!-- Star Wars Section-->
+<section>
+    <div class="starwars">
+        <div class="swflatlay">
+            <div><img src="images/xwing.svg" class="xwing hide-on-mob" /></div>
+            <div class="grid__row grid__wrap swwrap">
+
+                <div class="grid__col--12">
+                    <a href="/shop/en/smiggleuk/starwars-feature "><img src="images/starwars_logo.svg" class="disneylogo center" style="max-width: 250px;" alt="Star Wars" /></a>
+                </div>
+
+                <div class="previewtext center p10">
+                    <p>Rule your Galaxy with the new Star Wars Collection, exclusively designed and created for you!</p>
+                    <a href="/shop/en/smiggleuk/starwars-feature ">
+                        <h3>LEARN MORE <i class="fas fa-chevron-right"></i></h3>
+                    </a>
+                </div>
+
+            </div>
+            <div class="grid__row grid__wrap ns">
+
+
+                <div class="grid__col--4 grid__col-xxs-12" style="position: relative;">
+                    <div class="catbtn hide-on-mob">
+                        <a href="/shop/en/smiggleuk/all-disney/all-star-wars/star-wars-first-order ">
+                            <picture>
+                                <source media="(max-width: 639px)" srcset="images/btn_firstorder@1x.png, images/btn_firstorder@2x.png 2x" alt="Shop Anna">
+                                <img src="images/btn_firstorder@1x.png" srcset="images/btn_firstorder@2x.png 2x" alt="Shop Elsa" />
+                            </picture>
+                        </a>
+                        <a href="/shop/en/smiggleuk/all-disney/all-star-wars/star-wars-resistance ">
+                            <picture>
+                                <source media="(max-width: 639px)" srcset="images/btn_resistance@1x.png, images/btn_resistance@2x.png 2x" alt="Shop Anna">
+                                <img src="images/btn_resistance@1x.png" srcset="images/btn_resistance@2x.png 2x" alt="Shop Anna" />
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid__col--8 grid__col-xxs-12">
+                    <a href="/shop/en/smiggleuk/all-disney/all-star-wars ">
+                        <picture>
+                            <source media="(max-width: 639px)" srcset="images/img_sw_talent_01_mob@1x.png, images/img_sw_talent_01_mob@2x.png 2x" alt="Frozen 2">
+                            <img src="images/img_sw_talent_01@1x.png" srcset="images/img_sw_talent_01@2x.png 2x" alt="Frozen 2" />
+                        </picture>
+                    </a>
+                </div>
+                <div class="catbtn show-on-mob">
+                    <a href="/shop/en/smiggleuk/all-disney/all-star-wars/star-wars-first-order ">
+                        <picture>
+                            <source media="(max-width: 639px)" srcset="images/btn_firstorder@1x.png, images/btn_firstorder@2x.png 2x" alt="Shop Anna">
+                            <img src="images/btn_firstorder@1x.png" srcset="images/btn_firstorder@2x.png 2x" alt="Shop Elsa" />
+                        </picture>
+                    </a>
+                    <a href="/shop/en/smiggleuk/all-disney/all-star-wars/star-wars-resistance ">
+                        <picture>
+                            <source media="(max-width: 639px)" srcset="images/btn_resistance@1x.png, images/btn_resistance@2x.png 2x" alt="Shop Anna">
+                            <img src="images/btn_resistance@1x.png" srcset="images/btn_resistance@2x.png 2x" alt="Shop Anna" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Star Wars | Carousel -->
+    <a href="/shop/en/smiggleuk/all-disney/all-star-wars ">
+        <div class="carouselbg  hide-on-mob">
+            <div class="grid__row grid__wrap grid__space-3">
+                <div class="grid__col--12 disney_carousel_wrap">
+                    <div class="slick-big-wrap">
+                        <ul class="slick-disney">
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Red_Prod4.png">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Red_Prod5.png">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Red_Prod6.png">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Red_Talent1.png">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Blue_Prod4.png">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Blue_Prod5.png">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Blue_Talent1.png">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Blue_Talent2.png">
+                            </div>
+                            <div>
+                                <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Blue_Talent3.png">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
+
+<!-- Star Wars | Comp-->
+<section class="hide">
+    <div class="grid__row grid__wrap comp">
+        <a href="/shop/en/smiggleuk/starwars-competition ">
+            <picture>
+                <source media="(max-width: 639px)" srcset="images/comp_sw_mob@1x.png, images/comp_sw_mob@2x.png 2x" alt="Enter to win!">
+                <img src="images/comp_sw@1x.png" srcset="images/comp_sw@2x.png 2x" alt="Enter to win!" />
+            </picture>
+        </a>
+    </div>
+</section>
+<!-- Disney Both | Carousel -->
+<section>
+    <a href="/shop/en/smiggleuk/all-disney">
+        <div class="grid__row grid__wrap grid__space-3 show-on-mob" style="padding-top: 20px;">
+            <div class="grid__col--12 disney_carousel_wrap">
+                <div class="slick-big-wrap">
+                    <ul class="slick-disney">
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Elsa_Prod1.jpg">
+                        </div>
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Red_Prod4.png">
+                        </div>
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Elsa_Prod2.jpg">
+
+                        </div>
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Red_Prod6.png">
+                        </div>
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Red_Prod5.png">
+                        </div>
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Elsa_Prod6.jpg">
+                        </div>
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Red_Talent1.png">
+                        </div>
+
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Anna_Prod3.jpg">
+                        </div>
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/starwars/SW_Blue_Prod4.png">
+                        </div>
+                        <div>
+                            <img src="https://www.smiggle.co.uk/SM/aurora/images/espot/feature/frozen/FR_Elsa_Prod4.jpg">
+                        </div>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
+
+
+
+<script type="text/javascript">
+    $(function() {
+
+        $('.slick-disney').slick({
+            infinite: true,
+            dots: false,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            swipe: true,
+            touchMove: false,
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [{
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '0px',
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 568,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        arrows: false
+                    }
+                },
+            ]
+        });
+
+    });
+</script>
